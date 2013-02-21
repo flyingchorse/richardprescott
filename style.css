@@ -1,0 +1,872 @@
+/*
+Theme Name: View
+Theme URI: 
+Description: Child Theme of ToolBox
+Author: David Griffin
+Author URI: http://digidol-media.net 
+Template: toolbox
+Version: 1.0
+Tags: toolbox
+.
+Thematic is © Ian Stewart http://themeshaper.com/
+.
+
+font-family:'Arial';
+font-family:'Times LT W02 Italic';
+font-family:'Times LT W02 Roman';
+font-family:'Helvetica W02 Light';
+
+*/
+
+/* =Structure
+-------------------------------------------------------------- */
+
+* { margin:0; padding:0; }
+
+body {
+margin:0;}
+
+#name-bar {
+position: absolute;
+width: 100%;
+
+text-align: right;
+}
+
+#name-placeholder {
+border-bottom: white solid 1px;
+margin: 24px;
+margin-left: 64px;
+margin-right: 64px;
+color: white;
+font-family:'Arial';
+padding-bottom: 10px;}
+
+.gallery-pages #name-placeholder {
+border-bottom: #cccccc solid 1px;
+}
+
+.gallery-pages #name-bar {
+background-color: white;
+}
+#name-bold {
+font-family:'Arial';
+font-weight:bold;
+letter-spacing: -0.05em;
+}
+
+#slide-list {
+position: absolute;
+
+
+}
+
+#thumb-button {
+margin-left:20px;
+float: left;}
+
+#tray-button {
+border: none;
+float: left;
+}
+
+.ipad #thumb-button {
+	display: none;
+}
+#page {
+	/* 	position: absolute; */
+	width:100%;
+	/* top:10%; */
+	font-family:'Arial';
+	display: block;
+	margin-bottom: 2em;
+	height: 100%;
+	padding-top: 5%;
+	/* margin: 1em; */
+
+}
+
+
+
+#horizon {
+	background-color: transparent;
+	position: absolute;
+	top: 50%;
+	left: 0px;
+	width: 100%;
+	margin-top: -200px;
+	text-align: center;
+	min-width: 900px; 
+}
+
+
+/*
+ .gallery-pages  #page {
+position: relative;
+bottom: none;
+padding-top: 200px;
+width: 1024px;
+margin: 0 auto;}
+*/
+#primary {
+	float: left;
+	margin: 0 -240px 0 0;
+	width: 100%;
+}
+
+#content {
+	/* margin: 0 280px 0 0; */
+	padding-top: 14px;
+}
+
+.page-template-automotive-gallery-page-php #content {
+display: none;}
+#main .widget-area {
+	float: right;
+	overflow: hidden;
+	width: 220px;
+}
+#colophon {
+	clear: both;
+	display: block;
+	width: 100%;
+}
+
+/* Increase the size of the content area for templates without sidebars */
+.full-width #content,
+.image-attachment #content,
+.error404 #content {
+	margin: 0;
+}
+
+/* Text meant only for screen readers */
+.screen-reader-text,
+.assistive-text {
+	position: absolute !important;
+	clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+	clip: rect(1px, 1px, 1px, 1px);
+}
+
+/* Alignment */
+.alignleft {
+	display: inline;
+	float: left;
+}
+.alignright {
+	display: inline;
+	float: right;
+}
+.aligncenter {
+	clear: both;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+
+/* =Header
+-------------------------------------------------------------- */
+
+
+#site-title {
+	font-family:'Arial';
+	font-size: 30px;
+	color: white;
+/* 	margin: .67em 0; */
+	/* border-top: solid white 1px; */
+	padding-top: 20px;
+	margin-left: 64px;
+	margin-right: 64px;
+}
+
+.gallery-pages #site-title {
+border-top: solid #cccccc 1px;}
+
+.page-template-thumbnail-overview-php #site-title {
+padding:0;
+margin-left: 64px;
+margin-right: 64px;
+}
+
+.home #site-title {
+border-top: none;}
+
+.gallery-pages #site-title,
+ .gallery-pages a:link, 
+ .gallery-pages a:visited , 
+ .gallery-pages  
+ .entry-title , 
+ .page-template-gallery-page-php, .gallery-pages #name-placeholder {
+color: black;}
+
+
+
+#site-description {
+	font-size: 2em;
+	font-weight: bold;
+	margin: 0 0 1em;
+	margin-left:-2000px;
+}
+
+a:link {
+    color:#ffffff;
+    text-decoration: none;
+}
+a:visited {
+    color:#ffffff;
+}
+a:active,
+a:hover {
+    color: #FF4B33;
+}
+
+
+
+/* .gallery-pages */ #branding {
+/* width:1024px; */
+margin: 0 auto;
+position: absolute;
+bottom: 0px;
+height: 150px;
+z-index: 1000;
+padding-bottom: 10px;}
+
+.ipad #branding {
+	height: auto;
+}
+
+.page-template-simple-page-php #branding, .page-template-alternate-homepage-php #branding, .page-template-resizegallery-page-php #branding {
+border: none;
+margin: 0;
+width: 100%;
+}
+
+#brandbar {
+border-top: solid #cccccc 1px;
+margin-left: 64px;
+margin-right: 64px;
+}
+
+.ipad #brandbar {
+margin-left: 32px;
+margin-right: 32px;
+}
+
+.home #brandbar {
+border-top: none;
+
+}
+
+
+.home #branding {
+border: none;
+margin: 0;
+width: 100%;}
+
+.page-template-thumbnail-overview-php #branding {
+border: none;
+width:100%;
+margin:0;
+}
+
+
+
+.gallery-pages #branding {
+background-color: white;
+width: 100%;}
+
+#header-spacer {
+width:1024px;
+height: 400px;}
+/* =Menu
+-------------------------------------------------------------- */
+
+#thumbgrid-position {
+
+margin:0 auto;
+width: 90%;}
+
+#thumbgrid-container {
+
+outline: none;
+top:78px;
+bottom:190px;
+position: absolute;
+overflow: auto;
+width: 90%;
+text-align: center;
+}
+
+.gallery-thumbnail {
+margin: 3px;
+height: 75px;
+width: 112px;
+
+display:inline-table;
+}
+
+.gallery-thumbnail img{
+border: solid #e6e6e6 1px;
+}
+
+#access {
+	background: none;
+	display: block;
+	float: left;
+	margin: 0 auto;
+	width: 90px;
+/* 	position: absolute; */
+/*	margin-top:-76px; */
+/* 	border-left: solid white 1px; */
+	padding-top: 15px;
+}
+
+.gallery-pages #access a {
+/* border-left: solid 1px gray; */
+color: black;
+
+}
+#access ul {
+	list-style: none;
+	margin: 0;
+	padding-left: 0;
+}
+#access li {
+/* 	float: left; */
+	position: relative;
+}
+
+#access ul li a{
+font-family:'Arial';
+font-size: 11px;
+}
+
+#access a {
+	color: white;
+	display: block;
+	line-height: 1.5em;
+	text-decoration: none;
+	
+}
+#access ul ul {
+	display: none;
+	float: left;
+	position: absolute;
+	top: 2em;
+	left: 0;
+	z-index: 99999;
+}
+#access ul ul ul {
+	left: 100%;
+	top: 0;
+}
+#access ul ul a {
+	line-height: 1em;
+	padding: .5em .5em .5em 1em;
+	width: 10em;
+	height: auto;
+}
+#access li:hover > a,
+#access ul ul :hover > a {
+	color: gray;
+}
+
+.gallery-pages #access li:hover > a,
+.gallery-pages #access ul ul :hover > a {
+	color: gray;
+}
+
+#access ul ul a:hover {
+	
+}
+#access ul li:hover > ul {
+	display: block;
+}
+
+#access ul .children {
+margin-left: 120px;}
+
+
+/* Secondary Nav 
+---------------------------------------------------------------*/
+
+.secondary_menu_class {
+
+margin-top: 13px;
+/* padding-left: 432px; */
+overflow: auto;
+height: 110px;
+
+}
+
+.secondary_menu_class ul li {
+list-style: none;
+float: left;
+width:230px;}
+
+.ipad #secondary_menu_class ul li {
+	line-height: 10px;
+	width: 210px;
+}
+
+.secondary_menu_class ul li a {
+font-family:'Arial';
+font-size: 11px;
+color: gray;
+}
+
+.secondary_menu_class li:hover > a,
+.secondary_menu_class ul ul :hover > a {
+	color: black;
+}
+
+.secondary_menu_class ul li a:active {
+color: black;
+}
+
+
+
+
+/* =Content
+-------------------------------------------------------------- */
+
+.entry-title {
+/* margin-top: -85px; */
+font-family:'Arial';
+font-size: 30px;
+color: #ffffff;
+margin-left: 60%;
+font-style: normal;
+}
+
+/*
+.gallery-pages .entry-title {
+margin-left: 589px;
+
+}
+*/
+
+.entry-content {
+margin-left: 60%;
+font-family:'Arial';
+color: #ffffff;
+font-size: 13px;
+color: gray;
+}
+
+
+
+.bio.entry-content {
+margin-left: 64px;
+font-size: 14px;
+width: 1037px;
+
+}
+
+.ipad .bio.entry-content {
+font-size: 12px;
+
+}
+
+
+#bio-primary {
+position: fixed;
+bottom: 220px;
+width:100%;}
+
+#strong-blue{
+font-family:'Arial';
+color: #00467f;
+font-size: 30px;
+letter-spacing: -.03em;
+}
+
+/*
+.gallery-pages .entry-content {
+margin-left: 589px;}
+*/
+
+h1 .entry-title {
+font-family:'Arial';
+font-style: normal;
+}
+
+.sticky {
+}
+.entry-meta {
+	clear: both;
+	display: block;
+}
+.single-author .entry-meta .byline {
+	display: none;
+}
+#content nav {
+	display: block;
+	overflow: hidden;
+}
+#content nav .nav-previous {
+	float: left;
+	width: 50%;
+}
+#content nav .nav-next {
+	float: right;
+	text-align: right;
+	width: 50%;
+}
+#content #nav-above {
+	display: none;
+}
+.paged #content #nav-above,
+.single #content #nav-above {
+	display: block;
+}
+#nav-below {
+	margin: 1em 0 0;
+}
+.page-link {
+	clear: both;
+	margin: 0 0 1em;
+}
+.page .edit-link {
+	clear: both;
+	display: block;
+}
+
+/* 404 page */
+.error404 .widget {
+	float: left;
+	width: 33%;
+}
+.error404 .widget .widgettitle,
+.error404 .widget ul {
+	margin-right: 1em;
+}
+.error404 .widget_tag_cloud {
+	clear: both;
+	float: none;
+	width: 100%;
+}
+
+/* Notices */
+.post .notice,
+.error404 #searchform {
+	background: #eee;
+	display: block;
+	padding: 1em;
+}
+
+/* Image Attachments */
+.image-attachment div.entry-meta {
+	float: left;
+}
+.image-attachment nav {
+	float: right;
+	margin: 0 0 1em 0;
+}
+.image-attachment .entry-content {
+	clear: both;
+}
+.image-attachment .entry-content .entry-attachment {
+	background: #eee;
+	margin: 0 0 1em;
+	padding: 1em;
+	text-align: center;
+}
+.image-attachment .entry-content .attachment {
+	display: block;
+	margin: 0 auto;
+	text-align: center;
+}
+
+/* Aside Posts */
+.format-aside .entry-header {
+	display: none;
+}
+.single .format-aside .entry-header {
+	display: block;
+}
+.format-aside .entry-content,
+.format-aside .entry-summary {
+	padding-top: 1em;
+}
+.single .format-aside .entry-content,
+.single .format-aside .entry-summary {
+	padding-top: 0;
+}
+
+/* Gallery Posts */
+.format-gallery .gallery-thumb {
+	float: left;
+	margin: 0 1em 0 0;
+}
+
+/* Image Posts */
+.format-image .entry-header {
+	display: none;
+}
+.single .format-image .entry-header {
+	display: block;
+}
+.format-image .entry-content,
+.format-image .entry-summary {
+	padding-top: 1em;
+}
+.single .format-image .entry-content,
+.single .format-image .entry-summary {
+	padding-top: 0;
+}
+
+
+/* =Images
+-------------------------------------------------------------- */
+
+a img {
+	border: none;
+}
+p img {
+	margin-bottom: 0.5em; /* a small bottom margin prevents content floating under images */
+}
+/*
+Resize images to fit the main content area.
+- Applies only to images uploaded via WordPress by targeting size-* classes.
+- Other images will be left alone. Use "size-auto" class to apply to other images.
+*/
+img.size-auto,
+img.size-full,
+img.size-large,
+img.size-medium,
+.attachment img,
+.widget-area img {
+	max-width: 100%; /* When images are too wide for containing element, force them to fit. */
+	height: auto; /* Override height to match resized width for correct aspect ratio. */
+}
+img.alignleft {
+	margin-right: 1em;
+}
+img.alignright {
+	margin-left: 1em;
+}
+.wp-caption {
+	padding: .5em;
+	text-align: center;
+}
+.wp-caption img {
+	margin: .25em;
+}
+.wp-caption .wp-caption-text {
+	margin: .5em;
+}
+.gallery-caption {
+}
+.wp-smiley {
+	margin: 0;
+}
+
+
+/* =Forms
+-------------------------------------------------------------- */
+
+#searchform label {
+	display: none;
+}
+#searchform input#s {
+	width: 60%;
+}
+input[type=text],
+input#s {
+	margin: 0 1em 0 0;
+	width: 60%;
+}
+textarea {
+	width: 80%;
+}
+
+/* Class for labelling required form items */
+.required {
+	color: #cc0033;
+}
+
+
+/* =Comments
+-------------------------------------------------------------- */
+
+article.comment {
+	display: block;
+}
+#respond input[type=text] {
+	display: block;
+	width: 60%;
+}
+#respond textarea {
+	display: block;
+	margin: 0 0 1em;
+	width: 80%;
+}
+#respond .form-allowed-tags {
+	clear: both;
+	width: 80%;
+}
+#respond .form-allowed-tags code {
+	display: block;
+}
+
+
+/* =Widgets
+-------------------------------------------------------------- */
+
+.widget {
+	display: block;
+}
+.widget-area .widget_search {
+	overflow: hidden;
+}
+.widget-area .widget_search input {
+	float: left;
+}
+
+
+/* =Footer
+-------------------------------------------------------------- */
+
+#colophon {
+	padding: 1em 0 0;
+}
+
+/* =Slideshow
+-------------------------------------------------------------*/
+#slide-container {
+height: 400px;
+padding-bottom: 5px;
+
+}
+
+#anchor-div {
+position: fixed;
+bottom: 160px;
+
+}
+
+
+#art-slideshow {
+	margin: 0 auto;
+   	position:relative;
+   	width: 970px;
+	height: 400px;
+	z-index: -1;
+	padding-bottom: 22px;
+}
+
+#art-slideshow .slide-image {
+    position:absolute;
+    top:0;
+    left:0;
+    z-index:8;
+    opacity:0.0;
+}
+
+#art-slideshow IMG.active {
+    z-index:10;
+    opacity:1.0;
+}
+
+#art-slideshow IMG.last-active {
+    z-index:9;
+}
+
+#thumb-container ul{
+list-style: none;
+padding: 0;
+margin:0;
+float:left;}
+
+#thumb-container li {
+float: left;}
+
+
+#thumb-container {
+position: absolute;
+bottom:0;
+width: 100%;
+margin-bottom: -34px;
+}
+
+#gallery-thumbnails{
+width:970px;
+margin: 0 auto;
+padding: 0;
+
+}
+
+#thumbnail-button{
+padding: 5px;}
+
+.gallery-thumbs {
+margin-left: 0;}
+
+img.gallery-thumbs {
+margin:0;}
+
+#large-grid {
+background:url(supersized/slideshow/img/large-thumbgrid-icon.png) no-repeat;
+height:43px;
+width:85px;
+margin-top: 16px;
+opacity: 0.3;
+float: left;
+margin-left: 20px;
+}
+
+.page-template-simple-page-php #large-grid {
+/*
+margin-top: -60px;
+margin-left: 290px;
+*/}
+
+/*
+.home  #large-grid {
+position: absolute;
+top:0;
+
+
+}
+*/
+
+#large-grid-link { 
+position:absolute; width:85px; height:43px; z-index: 1 }
+
+#thumb-g-container {
+position: absolute;
+bottom: 160px;
+width: 100%;
+}
+#thumb-g-margin {
+margin-left: 64px;
+margin-right: 64px;
+}
+
+#smll-nav-arrows {
+	width: 70px;
+height: 70px;
+position: relative;
+float: left;
+}
+
+#image-info {
+	background: url(img/info.png) left top no-repeat;
+	position: absolute;
+	top:80px;
+	left: 64px;
+	height: 15px;
+	width: 80%;
+}
+
+.entry-content-caption {
+	font-family: 'Arial';
+	font-size: 11px;
+	color: #9e9e9e;
+	display: none;
+	padding-left: 20px;
+	padding-top: 2px;
+
+		
+}
